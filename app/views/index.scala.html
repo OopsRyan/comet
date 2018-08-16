@@ -1,0 +1,19 @@
+@this(config: play.api.Configuration)
+
+@()
+
+@main("Welcome to Play") {
+  <div id="header">
+    <div id="title">
+      <a >Qirun Chen</a>
+    </div>
+    <div class="topnav">
+      <a class="active" href="#About">About</a>
+      <a href="#Project">Project</a>
+      <a href="#Contact">Contact</a>
+      <a href="#Map">Map</a>
+    </div>
+  </div>
+
+  <h1>@config.get[String]("introduction.qchen")</h1>
+}
