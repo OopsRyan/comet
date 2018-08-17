@@ -11,6 +11,7 @@
     float: left;
     background-color: white;
     font-size: 30px;
+    font-family: fantasy;
     padding: 14px 0px;
 }
 
@@ -19,6 +20,7 @@
     background-color: white;
     overflow: hidden;
     float: right;
+    font-family: "Lucida Grande", Helvetica, sans-serif;
 }
 
 /* Style the links inside the navigation bar */

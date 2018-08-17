@@ -1,11 +1,15 @@
 #footlinks {
     text-align: center;
-    font-size: 17px;
+    font-size: 15px;
+    font-family: Arial;
     padding: 20px 0;
+    color: darkslateblue;
 }
 
 #copyright {
     text-align: center;
-    font-size: 14px;
+    font-size: 13px;
+    font-family: Arial;
     padding: 0 0;
+    color: darkslateblue;
 }

@@ -1,0 +1,76 @@
+@()
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Gapminder World - Qirun Chen</title>
+        <script type="text/javascript" src="@routes.Assets.versioned("javascripts/d3.v4.js")" charset="utf-8"></script>
+        @*<link href="https://fonts.googleapis.com/css?family=Poppins|Raleway|Roboto+Mono|Varela+Round" rel="stylesheet">*@
+        <script src="@routes.Assets.versioned("javascripts/prism.js")" charset="utf-8"></script>
+        <script src="@routes.Assets.versioned("javascripts/topojson.min.js")"></script>
+        <script src="@routes.Assets.versioned("javascripts/d3-geo-projection.v1.min.js")"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- load scripts -->
+        <script src="@routes.Assets.versioned("gapminder/initialisation.js")"></script>
+        <script src="@routes.Assets.versioned("gapminder/color_labels.js")"></script>
+        <script src="@routes.Assets.versioned("gapminder/fade.js")"></script>
+        <script src="@routes.Assets.versioned("gapminder/focus_point.js")"></script>
+        <script src="@routes.Assets.versioned("gapminder/bar_charts.js")"></script>
+        <script src="@routes.Assets.versioned("gapminder/geo_map.js")"></script>
+        <script src="@routes.Assets.versioned("gapminder/animation_control.js")"></script>
+        <script src="@routes.Assets.versioned("gapminder/check_box.js")"></script>
+        <script src="@routes.Assets.versioned("gapminder/traces.js")"></script>
+        <script src="@routes.Assets.versioned("gapminder/generate_vis.js")"></script>
+        <!-- Stylesheets -->
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/gapminder.css")">
+    </head>
+
+    <body>
+        <div id="bubble_div">
+            <div class="map">
+                <div id="bubble_chart_div" class="bubble_chart_div">
+                    <script src="@routes.Assets.versioned("gapminder/main.js")"></script>
+                </div>
+
+                <div class="controlButtons">
+                    <div class="play_btn">
+                        <input class="playBtn" type="button" id="play_btn" value="Start" onclick="play_btn()" />
+                    </div>
+                    <div id="slider_div" class="time_line">
+                    </div>
+                    <div class="speedControlPar">
+                        <div class="speedControl">
+                            <br>
+                            <input id='trace_checkBox' type='checkbox'> Show Traces
+                            <input id='line_checkBox' type='checkbox'> Show Lines<br><br>
+                            <input type="radio" name="interval" onclick="interval_change(this);" value="1" checked/> Speed 1
+                            <input type="radio" name="interval" onclick="interval_change(this);" value=1.5 /> Speed 2
+                            <input type="radio" name="interval" onclick="interval_change(this);" value="2" /> Speed 3
+                        </div>
+                        <div class="geoMapPar">
+                            <div>Missing data on grey areas.</div>
+                            <div id="geo_map"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="chart_label_div" class="chart_label_container">
+                <div class="subChartTop">
+                    <h3>Color Label & Country Checkbox</h3>
+                    <div id="bubble_label_div" class="bubble_label_div"></div>
+                    <div id="country_checkbox_scroll" class="country_checkbox_scroll"></div>
+                </div>
+                <div class="subChartBot">
+                    <h3>Number of countries in per region</h3>
+                    <div id="country_region_barchart"></div>
+                    <h3>Number of countries with each government type</h3>
+                    <div id="country_govern_barchart"></div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+</html>
