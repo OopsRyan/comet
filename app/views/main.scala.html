@@ -4,23 +4,47 @@
  * two arguments, a `String` for the title of the page and an `Html`
  * object to insert into the body of the page.
  *@
-@(title: String)(content: Html)
+@()(content: Html)
 
 <!DOCTYPE html>
 <html lang="en">
     <head>
         @* Here's where we render the page title `String`. *@
-        <title>@title</title>
+        <title>Qirun Chen</title>
         <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")">
         <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/navigator.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/foot.css")">
         <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
 
     </head>
     <body>
+
         @* And here's where we render the `Html` object containing
          * the page content. *@
-        @content
+        <div class="wrap" >
+
+            @content
+
+            <div id="footlinks">
+                <a href="http://www.linkedin.com/in/qirun-chen/" alt="LinkedIn" target="_blank"
+                    onclick="trackOutboundLink('http://www.linkedin.com/in/qirun-chen/');">
+                    LinkedIn
+                </a> |
+                <a href="https://github.com/OopsRyan/" alt="LinkedIn" target="_blank"
+                    onclick="trackOutboundLink('https://github.com/OopsRyan/');">
+                    Github
+                </a> |
+                <a href="mailto:qirun.chen@@ucdconnect.ie" alt="email"
+                    onclick="trackOutboundLink('mailto:qirun.chen@@ucdconnect.ie');">
+                Email
+                </a>
+            </div>
+            <div id="copyright">
+                © 2018–Present <a href="https://github.com/OopsRyan/">Qirun Chen</a>. All rights reserved.
+            </div>
+        </div>
 
       <script src="@routes.Assets.versioned("javascripts/main.js")" type="text/javascript"></script>
+
     </body>
 </html>
