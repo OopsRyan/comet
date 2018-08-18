@@ -65,11 +65,10 @@ var svg = d3.select("#bubble_chart_div")
 
 initialize_titles();
 
-// ./data/Gapminder_All_Time.csv
+// data/Gapminder_All_Time.csv
 // Load the file data.csv and generate a visualisation based on it
-d3.csv("/assets/data/Gapminder_All_Time.csv", function(error, data) {
+d3.csv(document.getElementById("mainScript").getAttribute("data"), function(error, data) {
 
-    console.log(data)
     // handle any data loading errors
     if (error) {
         console.log("Something went wrong");

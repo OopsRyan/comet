@@ -1,3 +1,5 @@
+
+
 function get_checked_country() {
 
     // convert nodelist to array, because map needs an iteratable object
@@ -51,7 +53,7 @@ function initialize_geo_map() {
     // console.log(country_region)
 
 
-    d3.tsv("./data/world-country-names.tsv", function(error, data) {
+    d3.tsv(document.getElementById("geoMapScript").getAttribute("countryNames"), function(error, data) {
         if (error) throw error;
 
         country_dict = {};
@@ -78,7 +80,7 @@ function initialize_geo_map() {
         .style("opacity", 0.0)
 
     // assign data to world
-    d3.json("./data/world-110m.json", function(error, world) {
+    d3.json(document.getElementById("geoMapScript").getAttribute("countryScale"), function(error, world) {
         if (error) throw error;
 
         var georoot = topojson.feature(world, world.objects.countries);
