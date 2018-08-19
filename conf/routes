@@ -11,3 +11,4 @@ GET     /projects/gapminder         controllers.ProjectsController.gapMinder
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
 GET     /data/Gapminder_All_Time.csv        controllers.Assets.at(path="/public/data", file="Gapminder_All_Time.csv")
+GET     /resources/qirun_chen_resume.pdf        controllers.Assets.at(path="/public/resources", file="qirun_chen_resume.pdf")
