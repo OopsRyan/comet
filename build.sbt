@@ -15,3 +15,5 @@ libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "3.1.2
 
 // Adds additional packages into conf/routes
 // play.sbt.routes.RoutesKeys.routesImport += "qchen.binders._"
+
+PlayKeys.devSettings := Seq("play.server.http.port" -> "80")
