@@ -9,3 +9,54 @@
     font-size: 20px;
     font-family: 'DejaVu Sans Mono', monospace;
 }
+
+
+/* for index template*/
+
+.introduction {
+    width: 100%;
+    height: 300px;
+    margin: auto;
+    clear: both;
+}
+.div_selfie {
+    padding-top: 50px;
+    width: 40%;
+    float: left;
+}
+.div_description {
+    width: 60%;
+    /*overflow: hidden;*/
+    float: right;
+    font-size: 15px;
+    font-family: "Lucida Grande", Helvetica, sans-serif;
+    color: #676767;
+}
+.selfie {
+    width:300px;height:200px;
+}
+
+/*for projects template*/
+
+.sectionName {
+    font-family: Bitter, Georgia, "Times New Roman", Times, serif;
+}
+
+.projectList {
+    list-style: disc;
+    margin: 0 0 1.692307em 2.8em;
+    padding: 0;
+    font-size: 17px;
+    font-family: Arial;
+    color: #676767;
+}
+.projectName {
+    font-weight:bold;
+    text-decoration: none;
+    color: black;
+}
+.assignmentName {
+    font-weight:bold;
+    text-decoration: none;
+    color: #0000cc;
+}

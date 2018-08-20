@@ -2,7 +2,7 @@
 @()
 
 @main() {
-    <div id="header">
+    <div id="header" xmlns="http://www.w3.org/1999/html">
         <div id="title">
             <a>Qirun Chen</a>
         </div>
@@ -14,8 +14,31 @@
             <a href="/resources/qirun_chen_resume.pdf" target="_blank">RESUME</a>
         </div>
     </div>
+    <h2 class="sectionName">Zalando</h2>
     <hr>
-    <h2 class="content">@config.get[String]("introduction.qchen")</h2>
-    <a href="@routes.Assets.versioned("superlearner/SuperLearnerClassifier.html")" target="_blank">SuperLearner</a>
-    <a href="@routes.Assets.versioned("mlp/mlp.html")" target="_blank">Multi-layer Perceptron</a>
+    <ul class="projectList">
+        <li><a class="projectName">Customer Segmentation: </a>
+            @config.get[String]("projects.zalando.CustomerSegmentation")</li><br>
+        <li><a class="projectName">Dev Environment: </a>
+            @config.get[String]("projects.zalando.DevEnvironment")</li><br>
+        <li><a class="projectName">Modelling: </a>
+            @config.get[String]("projects.zalando.Modelling")</li><br>
+        <li><a class="projectName">Evaluation: </a>
+            @config.get[String]("projects.zalando.Evaluation")</li><br>
+        <li><a class="projectName">JobMonitoring: </a>
+            @config.get[String]("projects.zalando.JobMonitoring")</li>
+    </ul>
+    <hr><br>
+
+    <h2 class="sectionName">Assignments<a style="font-size: 15px;float: right; padding-top: 13px">click on names to see demos</a></h2>
+    <hr>
+    <ul class="projectList">
+        <li><a class="assignmentName" href="/projects/gapminder">Data visualisation - Channelling Hans: </a>
+            @config.get[String]("projects.assignments.gapminder")</li><br>
+        <li><a class="assignmentName" href="@routes.Assets.versioned("superlearner/SuperLearnerClassifier.html")" target="_blank">Super Learner Classifier - Stacked Ensemble Algorithm: </a>
+            @config.get[String]("projects.assignments.superlearner")</li><br>
+        <li><a class="assignmentName" href="@routes.Assets.versioned("mlp/mlp.html")" target="_blank">Multi-layer Perceptron: </a>
+            @config.get[String]("projects.assignments.mlp")</li></li>
+    </ul>
+    <hr><br><br>
 }

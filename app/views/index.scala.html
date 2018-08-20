@@ -15,6 +15,15 @@
         </div>
     </div>
     <hr>
-    <h1>@config.get[String]("introduction.qchen")</h1>
+    <div class="introduction">
+        <div class="div_selfie">
+            <img class="selfie" src="@routes.Assets.versioned("images/selfie.jpg")" alt="selfie">
+        </div>
+        <div class="div_description">
+            @for(s <- config.get[Seq[String]]("introduction.qchen")) {
+                <p>@s</p>
+            }
+        </div>
+    </div>
     <hr>
 }
