@@ -14,4 +14,8 @@ class ProjectsController @Inject()(projectTemp: views.html.projects, cc: Control
   def gapMinder() = Action { implicit request: Request[AnyContent] =>
     Ok(views.html.gapminder())
   }
+
+  def resume() = Action { implicit request: Request[AnyContent] =>
+    Ok(views.html.resume())
+  }
 }
