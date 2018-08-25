@@ -5,8 +5,10 @@
 
 # An example controller showing a sample home page
 GET     /                           controllers.HomeController.index
-GET     /projects                   controllers.ProjectsController.index
+#GET     /projects                   controllers.ProjectsController.index
 GET     /projects/gapminder         controllers.ProjectsController.gapMinder
+GET     /projects/superlearner      controllers.Assets.at(path="/public/superlearner", file="SuperLearnerClassifier.html")
+GET     /projects/mlp               controllers.Assets.at(path="/public/mlp", file="mlp.html")
 GET     /projects/resume            controllers.ProjectsController.resume()
 
 # Map static resources from the /public folder to the /assets URL path
