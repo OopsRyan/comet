@@ -52,9 +52,6 @@
                         <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="/resources/qirun_chen_resume.pdf" target="_blank">Resume</a>
                     </li>
                 </ul>
@@ -73,7 +70,7 @@
                     </div>
                     <p class="lead mb-5">I am Qirun Chen, a M.Sc Computer Science graduate student from University College Dublin. I am interested in Machine Learning and Software Engineering.</p>
                     <p class="lead mb-5">This summer at Zalando, I worked as a Data Science intern about Customer Segementation. Prior to the master course; I was at an IT company in China working on Java EE and a little Android development.</p>
-                    <p class="lead mb-5">In my free time, I like to learn something advanced (currently Scala and distributed systems) and play ping-pong.</p>
+                    <p class="lead mb-5">In my free time, I like to learn something advanced (currently Scala) and play ping-pong.</p>
 
                     <div class="social-icons">
                         <a href="http://www.linkedin.com/in/qirun-chen/" target="_blank">
@@ -179,37 +176,55 @@ They are based on atucal users, who have been classified into socio-demographic-
                 <div class="my-auto">
                     <h2 class="mb-5">Projects</h2>
 
-                    <div class="resume-item d-flex flex-column flex-md-row mb-5">
+                    <div class="resume-item d-flex flex-column flex-md-row mb-5" id="gapminder">
                         <div class="resume-content mr-auto">
-                            <h3 class="mb-0"><a href="/projects/gapminder" target="_blank">Gap Minder</a></h3>
+                            <h3 class="mb-0"><a href="https://www.gapminder.org/tools" target="_blank">Gapminder Bubbles</a></h3>
                             <div class="subheading mb-3">
                                 Data Visualisation ☞
                                 <span class="text-primary"><a href="/projects/gapminder" target="_blank">Demo</a></span>
                             </div>
                             <p>
-Recreating GapMinder World visualisation using d3.js. A bubble plot representing the countries of the world. The population of each country mapped to bubble area. These countries are described by GDP and Life Expectancy mapped to x and y axis position. Applied appropriate use of colour, and showed the ability to view data for particular years and animate the change in country statistics from year to year 1900 − 2016.
+                                Gapminder Bubbles is a tool developed by Hans Rosling, a public health expert. The interactive bubble chart presents an animation with statistical and historical data about the development of the countries of the world with respect to lifespan, income, and population.
+
+                            </p>
+                            <p>
+                                I recreated this bubble chart according to the <a href="https://www.gapminder.org/tools" target="_blank">live version</a>
+                                using <a href="https://d3js.org/" target="_blank">d3.js</a>,
+                                a Javascript library for manipulating documents based on data.
+The bubble plot representing the countries of the world. The population of each country mapped to bubble area. These countries are described by GDP and Life Expectancy mapped to x and y axis position.
                             </p>
                             <p>
                                 <br><img src="@routes.Assets.versioned("images/gapMinder.gif")" alt="gapMinder">
                             </p>
                         </div>
                         <div class="resume-date text-md-right">
-                            <span class="text-primary"> </span>
+                            <span class="text-primary">   </span>
                         </div>
                     </div>
 
-                    <div class="resume-item d-flex flex-column flex-md-row mb-5">
-                        <div class="resume-content mr-auto">
-                            <h3 class="mb-0"><a href="/projects/superlearner" target="_blank">Super Learner Classifier</a></h3>
-                            <div class="subheading mb-3">
+                    <div class="resume-item d-flex flex-column flex-md-row mb-5" id="superlearner">
+                        <div class="resume-content mr-auto" >
+                            <h3 class="mb-0"><a href="https://biostats.bepress.com/ucbbiostat/paper266/" target="_blank">Super Learner</a></h3>
+                            <div class="subheading mb-3" >
                                 Stacked Ensemble Algorithm ☞
                                     <span class="text-primary"><a href="/projects/superlearner" target="_blank">Demo</a></span>
                             </div>
                             <p>
-Implementing the stacked ensemble classifier described in (van der Laan et al, 2007) based on scikit-learn. This is a classification model that uses a set of base classifiers of different types, the output of which are combined in another classifier at the stacked layer.
+                                The Super Learner is a heterogeneous stacked ensemble classifier described in
+                                <a href="https://biostats.bepress.com/ucbbiostat/paper266/" target="_blank">Super Learner In Prediction</a>(van der Laan et al, 2007).
+    This is a classification model that uses a set of base classifiers of different types, the output of which are combined in another classifier at the stacked layer.
                             </p>
                             <p>
-                                <br><img style="width:100%;height:100%;" src="@routes.Assets.versioned("images/superLearnerStructure.jpg")" alt="superLearner">
+                                The figure below shows a flow diagram of the Super Learner process. The base classifiers are trained and their outputs are combined along with the training dataset labels into a training set for the stack layer classifier.
+                                To avoid overfitting the generation of the stacked layer training set uses a k-fold cross validation process (described as V-fold in the figure).
+                            </p>
+                            <p>
+                                The super learner class inheriting from the base estimator class of scikit-learn is compatible with its APIs like
+                                GridSearchCV. The classifier at the stacked layer can be trained on label or probability outputs from the base classifiers by
+                                indicating a parameter. Also provided a method to measure the correlation between base classifiers for improving prediction performance.
+                            </p>
+                            <p>
+                                <img style="width:100%;height:100%;" src="@routes.Assets.versioned("images/superLearnerStructure.jpg")" alt="superLearner">
                             </p>
                         </div>
                         <div class="resume-date text-md-right">
@@ -217,7 +232,7 @@ Implementing the stacked ensemble classifier described in (van der Laan et al, 2
                         </div>
                     </div>
 
-                    <div class="resume-item d-flex flex-column flex-md-row mb-5">
+                    <div class="resume-item d-flex flex-column flex-md-row mb-5" id="mlp">
                         <div class="resume-content mr-auto">
                             <h3 class="mb-0"><a href="/projects/mlp" target="_blank">Multi-layer Perceptron</a></h3>
                             <div class="subheading mb-3">
@@ -225,7 +240,7 @@ Implementing the stacked ensemble classifier described in (van der Laan et al, 2
                                 <span class="text-primary"><a href="/projects/mlp" target="_blank">Demo</a></span>
                             </div>
                             <p>
-Implementing a simple multi-layer perceptron using Backpropagation algorithm with stochastic gradient descent. It can learn XOR and Sin functions very well. Also trained the model on public Letter Recognition Data Set(clean and extracted features) to recognise people’s handwriting.
+Implemented a simple multi-layer perceptron using Backpropagation algorithm with stochastic gradient descent. It can learn XOR and Sin functions very well. Also trained the model on public Letter Recognition Data Set(clean and extracted features) to recognise people’s handwriting.
                             </p>
                         </div>
                         <div class="resume-date text-md-right">
@@ -237,69 +252,6 @@ Implementing a simple multi-layer perceptron using Backpropagation algorithm wit
             </section>
 
             <hr class="m-0">
-
-            <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
-                <div class="my-auto">
-                    <h2 class="mb-5">Skills</h2>
-
-                    <div class="subheading mb-3">Programming Languages &amp; Tools</div>
-                    <ul class="list-inline dev-icons">
-                        <li class="list-inline-item">
-                            <i class="fab fa-html5"></i>
-                        </li>
-                        <li class="list-inline-item">
-                            <i class="fab fa-css3-alt"></i>
-                        </li>
-                        <li class="list-inline-item">
-                            <i class="fab fa-js-square"></i>
-                        </li>
-                        <li class="list-inline-item">
-                            <i class="fab fa-angular"></i>
-                        </li>
-                        <li class="list-inline-item">
-                            <i class="fab fa-react"></i>
-                        </li>
-                        <li class="list-inline-item">
-                            <i class="fab fa-node-js"></i>
-                        </li>
-                        <li class="list-inline-item">
-                            <i class="fab fa-sass"></i>
-                        </li>
-                        <li class="list-inline-item">
-                            <i class="fab fa-less"></i>
-                        </li>
-                        <li class="list-inline-item">
-                            <i class="fab fa-wordpress"></i>
-                        </li>
-                        <li class="list-inline-item">
-                            <i class="fab fa-gulp"></i>
-                        </li>
-                        <li class="list-inline-item">
-                            <i class="fab fa-grunt"></i>
-                        </li>
-                        <li class="list-inline-item">
-                            <i class="fab fa-npm"></i>
-                        </li>
-                    </ul>
-
-                    <div class="subheading mb-3">Workflow</div>
-                    <ul class="fa-ul mb-0">
-                        <li>
-                            <i class="fa-li fa fa-check"></i>
-                            Mobile-First, Responsive Design</li>
-                        <li>
-                            <i class="fa-li fa fa-check"></i>
-                            Cross Browser Testing &amp; Debugging</li>
-                        <li>
-                            <i class="fa-li fa fa-check"></i>
-                            Cross Functional Teams</li>
-                        <li>
-                            <i class="fa-li fa fa-check"></i>
-                            Agile Development &amp; Scrum</li>
-                    </ul>
-                </div>
-            </section>
-
         </div>
 
             <!-- Bootstrap core JavaScript -->
